@@ -1,0 +1,21 @@
+{
+  "name": "mixcloud",
+  "version": "0.0.0",
+  "description": "Client for the Mixcloud API",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -u tdd"
+  },
+  "author": "Micheil Smith <micheil@brandedcode.com>",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.40.0",
+    "moment": "^2.8.2",
+    "when": "^3.4.4"
+  },
+  "devDependencies": {
+    "expect": "^0.1.1",
+    "mocha": "^1.21.4",
+    "nock": "^0.45.0"
+  }
+}
