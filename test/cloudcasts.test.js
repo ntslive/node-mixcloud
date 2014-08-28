@@ -1,5 +1,7 @@
 var expect = require('expect');
 var nock = require('nock');
+// Prevent external connections via Nock
+nock.disableNetConnect();
 
 var mixcloud = require('../');
 
