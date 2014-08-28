@@ -9,6 +9,7 @@
   "author": "Micheil Smith <micheil@brandedcode.com>",
   "license": "MIT",
   "dependencies": {
+    "joi": "^4.6.2",
     "moment": "^2.8.2",
     "promise": "^5.0.0",
     "request": "^2.40.0"
