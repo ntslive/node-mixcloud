@@ -9,9 +9,9 @@
   "author": "Micheil Smith <micheil@brandedcode.com>",
   "license": "MIT",
   "dependencies": {
-    "request": "^2.40.0",
     "moment": "^2.8.2",
-    "when": "^3.4.4"
+    "promise": "^5.0.0",
+    "request": "^2.40.0"
   },
   "devDependencies": {
     "expect": "^0.1.1",
