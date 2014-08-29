@@ -74,9 +74,13 @@ describe('request', function() {
       .then(successFn, function(error){
         expect(error.name).to.equal('RateLimited');
         expect(error.message).to.equal('You have hit your rate limit. Retry after 452 seconds.');
-        expect(error.payload).to.deep.equal({
-          retry_after: 452
-        });
+
+        expect(error.payload).to.have.keys('retry_after', 'retry');
+        expect(error.payload.retry_after).to.equal(452);
+        expect(error.payload.retry).to.be.a('function');
+
+        var res = error.payload.retry();
+        expect(res).to.be.an.instanceOf(Promise);
 
         return "error";
       })
