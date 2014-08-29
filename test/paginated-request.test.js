@@ -94,6 +94,15 @@ describe('paginatedRequest', function() {
     done();
   });
 
+  it("should reject on request error", function(done){
+    paginatedRequest('/')
+      .then(null, function(error){
+        // This is as we've not setup the http mock
+        expect(error.name).to.equal("NetConnectNotAllowedError");
+        done();
+      });
+  })
+
   it('should reject the promise if the response status code is not 200', function(done) {
     // This is the actual mixcloud response:
     http.get('/list').reply(201, {});
