@@ -8,6 +8,7 @@
     "audit": "npm shrinkwrap --dev && nsp audit-shrinkwrap && rm npm-shrinkwrap.json",
     "outdated": "npm outdated --depth 0"
   },
+  "homepage": "https://github.com/ntslive/node-mixcloud",
   "author": "Micheil Smith <micheil@brandedcode.com>",
   "license": "MIT",
   "dependencies": {

@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2014 Micheil Smith <micheil@brandedcode.com>
+Copyright (c) 2014 NTS Live LTD <hello@ntslive.co.uk>
+Developed by Micheil Smith <micheil@brandedcode.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
