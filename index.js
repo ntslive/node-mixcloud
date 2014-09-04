@@ -2,6 +2,7 @@ var Joi = require('joi');
 var Promise = require('promise');
 var path = require('path');
 
+var createError = require('./lib/create-error');
 var schema = require('./lib/schema');
 var request = require('./lib/request');
 var paginatedRequest = require('./lib/paginated-request');
