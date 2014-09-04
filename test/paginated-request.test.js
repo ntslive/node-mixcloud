@@ -242,6 +242,8 @@ describe('paginatedRequest', function() {
       paginatedRequest('/list').then(function (res) {
         expect(res.pagination.next).to.be.a('function');
         expect(res.pagination.previous).to.be.a('function');
+        expect(res.pagination.nextUrl).to.be.a('string');
+        expect(res.pagination.previousUrl).to.be.a('string');
 
         done();
       });
