@@ -16,7 +16,7 @@ nock.disableNetConnect();
 
 var paginatedRequest = require('../lib/paginated-request');
 
-var date = new Date(1409140301000);
+var date = new Date(1409137680000);
 var dateString = '2014-08-27%2012%3A08%3A00';
 
 var successFn = function(){
@@ -219,7 +219,53 @@ describe('paginatedRequest', function() {
       });
     });
 
-    // TODO: tests for `until` and `since` as isoDate string, integer, and mixcloud date format.
+    it('should handle `since` as a Number', function (done) {
+      http.get('/list?since=' + dateString).reply(200, { data: [], paging: {} });
+
+      paginatedRequest('/list', { since: 1409137680000 }).then(function(){
+        done();
+      });
+    });
+
+    it('should handle `until` as a Number', function (done) {
+      http.get('/list?until=' + dateString).reply(200, { data: [], paging: {} });
+
+      paginatedRequest('/list', { until: 1409137680000 }).then(function(){
+        done();
+      });
+    });
+
+    it('should handle `since` as a String', function (done) {
+      http.get('/list?since=' + dateString).reply(200, { data: [], paging: {} });
+
+      paginatedRequest('/list', { since: dateString }).then(function(){
+        done();
+      });
+    });
+
+    it('should handle `until` as a String', function (done) {
+      http.get('/list?until=' + dateString).reply(200, { data: [], paging: {} });
+
+      paginatedRequest('/list', { until: dateString }).then(function(){
+        done();
+      });
+    });
+
+    it('should handle `since` as an ISO String', function (done) {
+      http.get('/list?since=' + dateString).reply(200, { data: [], paging: {} });
+
+      paginatedRequest('/list', { since: "2014-08-27T11:08:00.000Z" }).then(function(){
+        done();
+      });
+    });
+
+    it('should handle `until` as an ISO String', function (done) {
+      http.get('/list?until=' + dateString).reply(200, { data: [], paging: {} });
+
+      paginatedRequest('/list', { until: "2014-08-27T11:08:00.000Z" }).then(function(){
+        done();
+      });
+    });
   });
 
 
