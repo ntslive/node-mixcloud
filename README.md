@@ -1,4 +1,10 @@
-# `npm install mixcloud`
+## :warning: WARNING :warning: 
+
+This library is deprecated and no longer maintained. It's dependencies are out-of-date and the codebase has known security vulnerabilities. 
+
+## Setup
+
+`npm install mixcloud`
 
 A work-in-progress Mixcloud API Client. We welcome pull requests to implement 
 additional features.
